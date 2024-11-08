@@ -15,7 +15,7 @@ const User = new mongoose.Schema(
     },
     uniqueId: {
       type: Number,
-      required: true,
+
       unique: true,
     },
     data: [
