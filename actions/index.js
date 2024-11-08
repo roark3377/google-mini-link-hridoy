@@ -300,7 +300,7 @@ export async function getUserLinks() {
     uniqueId = newUniqueId;
   }
 
-  return JSON.stringify("login/" + uniqueId);
+  return JSON.stringify("join/" + uniqueId);
 }
 
 export async function changeState(id, state, code) {
