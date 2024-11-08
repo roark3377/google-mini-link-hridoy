@@ -82,7 +82,7 @@ export async function signUp(FormData) {
     }
   } catch (error) {
     console.log(error);
-    return JSON.stringify({ error, success: false });
+    return JSON.stringify({ error: error.message, success: false });
   }
 }
 export async function logOut() {
