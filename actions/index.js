@@ -229,7 +229,7 @@ export async function dataState(id) {
   }
 }
 export async function getAllData({ admin, limit, page }) {
-  let id = await authCheck();
+  let {id} = await authCheck();
   try {
     await connectDB();
     if (admin) {
