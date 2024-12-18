@@ -70,9 +70,11 @@ export async function signUp(FormData) {
         success: false,
       });
     } else {
+       const useCount = await User.countDocuments();
       const newUser = new User({
         username,
         password,
+        uniqueId: useCount + 1,
       });
       await newUser.save();
       return JSON.stringify({
